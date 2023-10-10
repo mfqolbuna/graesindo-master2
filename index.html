@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+    <meta name="apple-mobile-web-app-title" content="CodePen">  
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">    
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>    
+    <link rel="canonical" href="https://codepen.io/alvarotrigo/pen/XWaYRKK">   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+.mySlides {
+    display: none;
+} 
+
+header {
+    width: 100%;
+    background: #11141a;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+
+.large {
+    height: 100%;
+    width: 100px;
+    margin-left: 240pt;
+    margin-right: 170pt;
+}
+nav a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+nav a:hover,nav a.active {
+    color: #0ef;
+}
+
+    .container1 {
+        width: 100%;
+        height: 100vh;
+        background: #222;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+   
+    .container2 {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+   }
+
+   h1 {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 100pt;
+   }
+
+   iframe {
+        width: 80%;
+        height: 500px;
+   }
+
+    .swiper {
+        width: 80%;
+        height: fit-content;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+    }
+
+    .swiper .swiper-button-prev, .swiper .swiper-button-next {
+        color: #fff;
+    }
+    .swiper .swiper-pagination-bullet-active {
+        background: #fff;
+    }
+
+    .image1 {
+	position: relative;
+	width: 400px;
+    }
+
+    .image1__img {
+	display: block;
+	width: 100%;
+    }
+
+    .image1__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #ffffff;
+	font-family: 'Quicksand', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.25s;
+    }
+
+    .image1__overlay--blur {
+	backdrop-filter: blur(5px);
+    }
+
+    .image1__overlay>* {
+	transform: translateY(20px);
+	transition: transform 0.25s;
+    }
+
+    .image1__overlay:hover {
+	opacity: 1;
+    }
+
+    .image1__overlay:hover>* {
+	transform: translateY(0);
+    }
+
+    .image1__title {
+	font-size: 2em;
+	font-weight: bold;
+    }
+
+    .image1__description {
+	font-size: 1.25em;
+	margin-top: 0.25em;
+    }
+
+section {
+    min-height: 100vh;
+    display: flex;
+    background: #6a7791;
+    justify-content: left;
+    align-items: left;
+}
+
+section:nth-child(1) {
+    color: #1ab3b3;
+}
+
+section:nth-child(2) {
+    color: #42455a;
+    background: #18bdbd;
+}
+
+section:nth-child(3) {
+    color: #1f8f8f;
+}
+
+section:nth-child(4) {
+    color: #12a0e2;
+    background: #e0ffff;
+}
+
+section .container {
+    margin: 100px;
+}
+
+section .text-container {
+    display: flex;
+}
+
+section .text-container .text-box {
+    margin: 20px;
+    padding: 20px;
+}
+
+section .text-container .text-box h3 {
+    font-size: 30px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+  
+@media (max-width: 900px) {
+    section h1 {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+section .text-container {
+    flex-direction: column;
+}
+}
+  
+.reveal {
+    position: relative;
+    opacity: 0;
+}
+  
+.reveal.active {
+    opacity: 1;
+}
+
+.active.fade-left {
+    animation: fade-left 1s ease-in;
+}
+
+@keyframes fade-left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-decoration: none;
+    margin: 10px 4px;
+    margin-left: 10pt;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.gfg {
+    position: relative;
+}
+       
+/*This CSS code is defining the styles for a container that holds text*/
+
+.gfg {
+    position: relative;
+    width: 100%;
+}
+
+.geeks {
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 365px;
+    width: 800px;
+    margin-left: 30pt;
+    background-color: black;
+    bottom: 313pt;
+    opacity: 0.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+.gfg1 {
+    position: absolute;
+    top: 25%;
+    left: 18.75%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.gfg2 {
+    font-size: 20px;
+    position: absolute;
+    top: 290pt;
+    margin-left: 327pt;
+    margin-right: 500pt;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: justify;
+    text-justify: inter-word;
+    
+}
+
+.gfg3 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 90pt;
+    margin-left: 90pt;
+    font-size: 140px;
+    font-weight: bold;
+}
+
+.gfg4 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 220pt;
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.gfg5 {
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 300pt;
+    margin-left: 0pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg6 {
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 300pt;
+    margin-left: 190pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg7 {
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 300pt;
+    margin-left: 355pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg8 {
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 300pt;
+    margin-left: 477pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg9 {
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 300pt;
+    margin-left: 600pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg10 {
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 300pt;
+    margin-left: 750pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg11 {
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 300pt;
+    margin-left: 853pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg12 {
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 300pt;
+    margin-left: 955pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg13 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 420pt;
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.gfg14 {
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 500pt;
+    margin-left: 22pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg15 {
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 500pt;
+    margin-left: 230pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg16 {
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 500pt;
+    margin-left: 380pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg17 {
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 500pt;
+    margin-left: 525pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg18 {
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 500pt;
+    margin-left: 680pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg19 {
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 500pt;
+    margin-left: 805pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg20 {
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 500pt;
+    margin-left: 952pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg21 {
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 500pt;
+    margin-left: 1125pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg22 {
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 500pt;
+    margin-left: 1235pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg23 { 
+    font-size: 40px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 550pt;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.gfg24 { 
+    font-size: 140px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 750pt;
+    margin-left: 370pt;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: bold;
+}
+
+.gfg25 { 
+    font-size: 140px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-top: 750pt;
+    margin-left: 455pt;
+    text-align: justify;
+    text-justify: inter-word;
+    font-weight: bold;
+}
+
+.btn1 { 
+    position: absolute;
+    top: 400pt;
+    left: 160pt;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #13c27f;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn1:hover {
+    background-color: black;
+}
+
+a:link, a:visited {
+  color: white;
+  text-decoration: none;
+}
+</style>
+<body translate="no">
+    <header>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>        
+        </nav>
+        <div class="large ">
+            <img src="pic_graha2.jpg">
+        </div>	        
+        <nav>
+    <a href="https://m.facebook.com/grahaestetikaindonesia/" class="fa fa-facebook"></a>
+    <a href="https://www.instagram.com/graha_estetika_indonesia/" class="fa fa-instagram"></a>
+    <a href="https://www.linkedin.com/in/graha-estetika-74567521b/?originalSubdomain=id" class="fa fa-linkedin"></a>
+    <a href="#" class="fa fa-pinterest"></a>
+    <a href="#" class="fa fa-youtube"></a>
+    <a href="https://wa.me/+628129699763" class="fa fa-whatsapp"></a>
+    <a href="tel:+628129699763" class="fa fa-phone"></a>
+    <a href="fax:+628129699763" class="fa fa-fax"></a>
+    <a href="mailto:grahaestetika_agus@yahoo.com" class="fa fa-envelope"></a>
+</nav>
+    </header>
+    <div>
+    <section id="home">
+        <div class="gfg">
+            <img src="halo.jpg" width="1000pt" height="1000pt">
+            <div class="geeks"></div>
+            <div class="gfg1">PT. Graha Estetika Indonesia</div>
+            <div class="gfg2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non deleniti animi optio, obcaecati natus, sapiente doloribus deserunt ex iure sunt, quis iusto eveniet magnam repudiandae error velit accusantium quaerat cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ad temporibus expedita architecto magni, beatae aspernatur consequuntur vitae amet dolorem maxime deserunt velit, cum nostrum facilis dignissimos porro! Reiciendis, ea.</div>
+            <button class="btn1"><a href="#about">see details for more information</a>
+            </button>
+          </div>
+    </section>
+    <section id="about">
+        <div class="container reveal fade-left active">
+            <div class="text-container">
+              <div class="text-box">
+                    <div class="gfg3">About</div>
+                    <div class="gfg4">Visi</div>
+                    <div class="gfg5">Membuat</div>
+                    <div class="gfg6">perusahaan</div>
+                    <div class="gfg7">unggul</div>
+                    <div class="gfg8">dalam</div>
+                    <div class="gfg9">bidang</div>
+                    <div class="gfg10">konstruksi</div>
+                    <div class="gfg11">&</div>
+                    <div class="gfg12">arsitektur.</div>
+                    <div class="gfg13">Misi</div>
+                    <div class="gfg14">Menciptakan</div>
+                    <div class="gfg15">perusahaan</div>
+                    <div class="gfg16">yang</div>
+                    <div class="gfg17">multifungsi</div>
+                    <div class="gfg18">dalam</div>
+                    <div class="gfg19">bidang</div>
+                    <div class="gfg20">konsultan,</div>
+                    <div class="gfg21">konstruksi,</div>
+                    <div class="gfg22">&</div>
+                    <div class="gfg23">arsitektur.</div>
+                </div>
+          </div>
+          </div>
+          </section>
+
+    <section id="services">
+        <div class="container1">
+            <div class="gfg24">Service</div>
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper ">
+                  <!-- Slides -->
+                  <div class="swiper-slide image1">
+                    <a target="_blank" href="tes.gif">
+                    <img class="image1__img" src="tes.gif" width="20pt"
+                    height="600pt" alt="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                  </a>
+                </div>
+                  <div class="swiper-slide image1">
+                    <a target="_blank" href="image (2).jpg">
+                    <img class="image1__img" src="image (2).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (3).jpg">
+                    <img class="image1__img" src="image (3).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (4).jpg">
+                    <img class="image1__img" src="image (4).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (5).jpg">
+                    <img class="image1__img" src="image (5).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (6).jpg">
+                    <img class="image1__img" src="image (6).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (7).jpg">
+                    <img class="image1__img" src="image (7).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (8).jpg">
+                    <img class="image1__img" src="image (8).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (9).jpg">
+                    <img class="image1__img" src="image (9).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (10).jpg">
+                    <img class="image1__img" src="image (10).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (11).jpg">
+                    <img class="image1__img" src="image (11).jpg" width="20pt"
+                    height="600pt" alt="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                  </a>
+                </div>
+                  <div class="swiper-slide image1">
+                    <a target="_blank" href="image (12).jpg">
+                    <img class="image1__img" src="image (12).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (13).jpg">
+                    <img class="image1__img" src="image (13).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (14).jpg">
+                    <img class="image1__img" src="image (14).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (15).jpg">
+                    <img class="image1__img" src="image (15).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (16).jpg">
+                    <img class="image1__img" src="image (16).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (17).jpg">
+                    <img class="image1__img" src="image (17).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (18).jpg">
+                    <img class="image1__img" src="image (18).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (19).jpg">
+                    <img class="image1__img" src="image (19).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (20).jpg">
+                    <img class="image1__img" src="image (20).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+            </div>
+        </div>
+          </section>
+    </section>
+    <section id="portfolio">
+        <div class="container1">
+            <div class="gfg25">Portfolio</div>
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper ">
+                  <!-- Slides -->
+                  <div class="swiper-slide image1">
+                    <a target="_blank" href="image (21).jpg">
+                    <img class="image1__img" src="image (21).jpg" width="20pt"
+                    height="600pt" alt="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                  </a>
+                </div>
+                  <div class="swiper-slide image1">
+                    <a target="_blank" href="image (22).jpg">
+                    <img class="image1__img" src="image (22).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (23).jpg">
+                    <img class="image1__img" src="image (23).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (24).jpg">
+                    <img class="image1__img" src="image (24).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (25).jpg">
+                    <img class="image1__img" src="image (25).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+                <div class="swiper-slide image1">
+                    <a target="_blank" href="image (26).jpg">
+                    <img class="image1__img" src="image (26).jpg"  width="20pt"
+                    height="600pt" class="Bricks">
+                    <div class="image1__overlay image1__overlay--primary">
+                        <div class="image1__title">Bricks</div>
+                        <p class="image1__description">
+                            Here we have a brick wall.
+                        </p>
+                    </div>
+                      </a>
+                </div>
+
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+            </div>
+        </div>
+
+    </section>  
+    <section id="contact">
+        <div class="container2">
+            <h1>Contact Us</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.
+            3208230099967!2d106.67463857499047!3d-6.
+            221358793766688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+            1!3m3!1m2!1s0x2e69f9e6aedc18e9%3A0xb6c2a90722d2e6fd!2sPT.
+            %20GRAHA%20ESTETIKA%20INDONESIA%2F%20AURA%20GALERI!5e0!3m2!1sen!2sid!
+            4v1695779290355!5m2!1sen!2sid" width="600" height="450" style="border:0;" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        </section>
+    <script src="script.js"></script>
+</body>
+<script>
+    let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+ 
+        if(top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+        };
+    });
+};
+</script>
+<script id="rendered-js">
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+    
+      for (var i = 0; i < reveals.length; i++) {if (window.CP.shouldStopExecution(0)) break;
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+    
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }window.CP.exitedLoop(0);
+    }
+    
+    window.addEventListener("scroll", reveal);
+    //# sourceURL=pen.js
+        </script>
+      <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+      <script>
+          const swiper = new Swiper('.swiper', {
+              autoplay: {
+                  delay: 3000,
+                  disableOnInteraction: false,
+              },
+        loop: true,
+      
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+      });
+      </script>          
+      </html>
